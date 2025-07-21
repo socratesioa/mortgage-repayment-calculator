@@ -319,7 +319,6 @@ label {
 }
 
 /* PREFIX & SUFFIX TEST */
-
 .input-wrapper-prefix,
 .input-wrapper-suffix {
   display: flex;

@@ -5,6 +5,7 @@ const interestRate = document.getElementById("interestRate");
 const displayMonthly = document.getElementById("monthly");
 const displayTerm = document.getElementById("term");
 
+// INITIALIZE CLEAVE.JS
 document.addEventListener("DOMContentLoaded", () => {
   const cleaveMortgage = new Cleave("#mortgageAmount", {
     numeral: true,
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// HANDLE SUBMIT
 const handleSubmit = (e) => {
   e.preventDefault();
 

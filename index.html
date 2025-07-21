@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <main>
+        <div class="calculator-container">
+          <div class="form-container">
+            <form id="form" novalidate>
+              <div class="form-header">
+                <h1 class="color-dark text-preset-2">Mortgage Calculator</h1>
+                <button type="reset" id="clearForm" class="text-preset-4">
+                  Clear All
+                </button>
+              </div>
+              <div class="form-wrapper">
+                <div class="input-group">
+                  <label for="mortgageAmount" class="text-preset-4 color-light"
+                    >Mortgage Amount</label
+                  >
+                  <div class="input-wrapper-prefix">
+                    <div class="prefix" aria-hidden="true">£</div>
+                    <input
+                      type="text"
+                      id="mortgageAmount"
+                      name="mortgageAmount"
+                      required
+                    />
+                  </div>
+                  <span
+                    class="error-message text-preset-5"
+                    id="error-mortgageAmount"
+                  ></span>
+                </div>
+                <div class="field-row">
+                  <div class="input-group">
+                    <label for="mortgageTerm" class="text-preset-4 color-light"
+                      >Mortgage Term</label
+                    >
+                    <div class="input-wrapper-suffix">
+                      <input
+                        type="number"
+                        id="mortgageTerm"
+                        name="mortgageTerm"
+                        required
+                      />
+                      <div class="suffix" aria-hidden="true">years</div>
+                    </div>
+
+                    <span
+                      class="error-message text-preset-5"
+                      id="error-mortgageTerm"
+                    ></span>
+                  </div>
+
+                  <div class="input-group">
+                    <label for="interestRate" class="text-preset-4 color-light"
+                      >Interest Rate</label
+                    >
+                    <div class="input-wrapper-suffix">
+                      <input
+                        type="number"
+                        id="interestRate"
+                        name="interestRate"
+                        required
+                      />
+                      <div class="suffix" aria-hidden="true">%</div>
+                    </div>
+
+                    <span
+                      class="error-message text-preset-5"
+                      id="error-interestRate"
+                    ></span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <fieldset>
+                    <legend class="text-preset-4 color-light">
+                      Mortgage Type
+                    </legend>
+
+                    <label class="radio-label">
+                      <input
+                        type="radio"
+                        name="mortgageType"
+                        value="repayment"
+                        required
+                      />
+                      <span class="label-text text-preset-3">Repayment</span>
+                    </label>
+
+                    <label class="radio-label">
+                      <input
+                        type="radio"
+                        name="mortgageType"
+                        value="interestOnly"
+                      />
+                      <span class="label-text text-preset-3"
+                        >Interest Only</span
+                      >
+                    </label>
+                  </fieldset>
+
+                  <span
+                    class="error-message text-preset-5 radio-error"
+                    id="error-mortgageType"
+                  ></span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn text-preset-3">
+                <img src="./images/icon-calculator.svg" alt="" />
+                <span>Calculate Repayments</span>
+              </button>
+            </form>
+          </div>
+          <div class="results-container">
+            <div id="empty-results">
+              <img
+                src="./images/illustration-empty.svg"
+                class="results-img"
+                alt=""
+              />
+              <h1 class="results-heading text-preset-2">Results shown here</h1>
+              <p class="text-preset-4">
+                Complete the form and click “calculate repayments” to see what
+                your monthly repayments would be.
+              </p>
+            </div>
+            <div id="mortgage-results">
+              <div class="results-header">
+                <h1 class="results-heading text-preset-2">Your results</h1>
+                <p class="text-preset-4">
+                  Your results are shown below based on the information you
+                  provided. To adjust the results, edit the form and click
+                  “calculate repayments” again.
+                </p>
+              </div>
+
+              <div class="calculation-outcome">
+                <h2 class="text-preset-4 color-heading-light">
+                  Your monthly repayments
+                </h2>
+                <span id="monthly" class="text-preset-1">$0</span>
+                <div class="separator"></div>
+                <h2 class="text-preset-4 color-heading-light">
+                  Total you'll repay over the term
+                </h2>
+                <span id="term" class="text-preset-2">$0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

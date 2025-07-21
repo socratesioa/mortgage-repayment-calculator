@@ -466,4 +466,15 @@ label {
     border-radius: 0;
     height: 100%;
   }
+
+  .text-preset-1 {
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: 0;
+    font-weight: 700;
+  }
+
+  .calculation-outcome {
+    padding: 24px 16px;
+  }
 }
